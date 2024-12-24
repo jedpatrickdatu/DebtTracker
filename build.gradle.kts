@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.jed"
-version = "0.0.1-SNAPSHOT"
+version = "1"
 
 java {
 	toolchain {
