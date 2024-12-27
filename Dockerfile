@@ -1,7 +1,12 @@
 FROM openjdk:17-jdk-slim
 WORKDIR /DebtTracker
 CMD ["./gradlew", "clean", "bootJar"]
-COPY build/libs/*.jar app.jar
+# COPY build/libs/*.jar app.jar
+RUN echo "Hello World"
+RUN ls
+RUN echo "Goodbye World"
+COPY --from=build /build/libs/*.jar app.jar
+
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
